@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="clock.css">
+</head>
+<body>
+    
+    
+    <div id="date">
+    <span id="hrs"></span>
+    <span>:</span>
+    <span id="min"></span>
+    <span>:</span>
+    <span id="sec"></span>
+    <span>:</span>
+    <span id="session">AM</span>-
+    <span id="day"></span>
+  </div>
+   
+
+    
+
+    <script>
+       
+      
+      
+      function main (){
+        var main = new Date();
+
+      var hrs  =  main.getHours();
+      var min  =  main.getMinutes();
+      var sec  =  main.getSeconds();
+      var session  = document.getElementById('session');
+      var week =  ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
+      var day  =  main.getDay() -1
+      
+      if(hrs >= 12){
+
+     session.innerHTML='PM';
+     }else{
+     session.innerHTML='AM';
+    }
+    if(hrs > 12){
+    hrs = hrs  -12;
+    }
+
+       document.getElementById('hrs').innerHTML=hrs;
+       document.getElementById('min').innerHTML=min;
+       document.getElementById('sec').innerHTML=sec;
+       document.getElementById('day').innerHTML=(week[day]);
+       }
+       setInterval(main)
+  </script>

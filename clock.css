@@ -1,0 +1,33 @@
+*{
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+
+ 
+    height: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-image: url(./stock-photo-desktop-computer-blank-screen-digital.jpg);
+    background-size: cover;
+    
+  }
+
+#date{
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-top: 300px;
+ color: white;
+font-size: 50px;
+letter-spacing: 7px;
+font-weight: 600px;
+color: red;
+}
+
+
+
